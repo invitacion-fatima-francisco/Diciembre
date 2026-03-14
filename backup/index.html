@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:title" content="¡Estás invitado! Boda de Fátima y Francisco" />
-    <meta property="og:description" content="Nos encantaría que nos acompañes a celebrar nuestro gran día este 26 de Diciembre de 2026. Toca aquí para abrir tu invitación." />
-    <meta property="og:image" content="https://tu-dominio.com/img/preview-boda.jpg" />
-    <meta property="og:url" content="https://tu-dominio.com/invitacion-fatima-francisco" />
-    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,16 +17,10 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
-    <title>Invitación Boda Fátima y Francisco</title>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <title>Invitación</title>
   </head>
 
   <body>
-    <div id="pantalla-botella" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #ffffff; z-index: 9999; display: flex; justify-content: center; align-items: center; cursor: pointer;">
-      <div id="animacion-contenedor" style="width: 100%; max-width: 400px; position: absolute; top: 40%; transform: translateY(-50%);"></div>
-    </div>
-
     <div class="audio-player">
       <button id="play-btn"><i class="fas fa-music"></i></button>
       <audio id="wedding-music" loop>
@@ -169,49 +158,5 @@
     <h3>Confirma tu asistencia</h3>
 
     <script src="script.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const contenedor = document.getElementById("animacion-contenedor");
-        const pantallaBotella = document.getElementById("pantalla-botella");
-
-        const animacion = lottie.loadAnimation({
-          container: contenedor, 
-          renderer: 'svg',
-          loop: false,
-          autoplay: false, 
-          path: 'carta.json' 
-        });
-
-        // 1. FORZAR EL PRIMER FRAME
-        animacion.addEventListener('data_ready', () => {
-          animacion.goToAndStop(25, true); 
-        });
-
-        // 2. UN SOLO CLIC Y REPRODUCIR
-        let animacionIniciada = false;
-
-        pantallaBotella.addEventListener("click", () => {
-          if (animacionIniciada) return; 
-          animacionIniciada = true;
-          
-          const totalFrames = animacion.totalFrames;
-          const mitadFrames = (totalFrames / 2)+5;
-
-          animacion.playSegments([25, mitadFrames], true);
-          
-          const duracionMitadMilisegundos = (animacion.getDuration(false) * 1000) / 2;
-
-          setTimeout(() => {
-            pantallaBotella.style.transition = "opacity 1s ease-in-out";
-            pantallaBotella.style.opacity = "0"; 
-            
-            setTimeout(() => {
-              pantallaBotella.style.display = "none"; 
-            }, 1000); 
-          }, duracionMitadMilisegundos);
-        });
-      });
-    </script>
   </body>
 </html>
