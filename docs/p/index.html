@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kylie & Anthony - Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="audio-player">
+      <button id="play-btn"><i class="fas fa-music"></i></button>
+      <audio id="wedding-music" loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <section class="hero-section">
+      <div class="background-flowers"></div>
+
+      <div class="card-frame entrance-anim">
+        <div class="initials-container">
+          <div class="letter-k"><h1 class="couple-names">K</h1></div>
+          <div class="ampersand">
+            <h1 class="couple-names"><span class="gold">&</span></h1>
+          </div>
+          <div class="letter-a"><h1 class="couple-names">A</h1></div>
+        </div>
+
+        <div class="divider">
+          <span class="ornament-text">~ ❦ ~</span>
+        </div>
+
+        <div class="wedding-title">THE WEDDING</div>
+        <div class="date">28 NOVIEMBRE 2025</div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container reveal">
+        <p class="welcome-msg">¡Nos Casamos!</p>
+        <div class="container-welcome">
+          <div class="container-welcome-2">
+            <div class="initials-container">
+              <div class="letter-k"><h1 class="couple-names">Kylie</h1></div>
+              <div class="ampersand">
+                <h1 class="couple-names"><span class="gold">&</span></h1>
+              </div>
+              <div class="letter-a"><h1 class="couple-names">Anthony</h1></div>
+            </div>
+          </div>
+        </div>
+        <div class="divider-line"></div>
+        <p class="date-large">28 Noviembre 2025</p>
+        <div class="divider-line"></div>
+        <p class="location">
+          <i class="fas fa-map-marker-alt"></i> Morelia, Michoacán
+        </p>
+      </div>
+    </section>
+
+    <section class="details-section">
+      <div class="container reveal">
+        <p class="blessing">Con la bendición de Dios y de nuestros padres</p>
+        <div class="parents-grid">
+          <div class="parents-col">
+            <h3>PAPÁS DE LA NOVIA</h3>
+            <p>Teresa Arellano Sámaro</p>
+            <p>Fernando Martínez Reed</p>
+          </div>
+          <div class="parents-col">
+            <h3>PAPÁS DEL NOVIO</h3>
+            <p>Blanca Estopier Mondragón</p>
+            <p>Alejandro Serralde Vargas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="itinerary-section">
+      <div class="container reveal">
+        <div class="timeline">
+          <div class="event-item">
+            <div class="icon-circle">
+              <i class="fas fa-church"></i>
+            </div>
+            <h3>Ceremonia</h3>
+            <p class="time">6:00 pm</p>
+            <p class="place">Templo de Santo Domingo</p>
+            <button class="map-btn">Ver Mapa</button>
+          </div>
+
+          <div class="event-item">
+            <div class="icon-circle">
+              <i class="fas fa-glass-cheers"></i>
+            </div>
+            <h3>Recepción</h3>
+            <p class="time">8:30 pm</p>
+            <p class="place">Casa Dos Lagos</p>
+            <button class="map-btn">Ver Mapa</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

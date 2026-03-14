@@ -1,0 +1,288 @@
+:root {
+  --bg-color: #fcfbf7; /* Color crema suave */
+  --text-color: #333;
+  --gold-color: #bfa05d; /* Dorado elegante */
+  --font-script: "Great Vibes", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-classic: "Cinzel", serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Efecto de aparición (Scroll Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- SECCIÓN 1: PORTADA --- */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* Marco estilo A4 */
+.card-frame {
+  border: 2px solid var(--gold-color);
+  padding: 40px 20px;
+  width: 80%;
+  max-width: 400px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.initials {
+  font-family: var(--font-classic);
+  font-size: 4rem;
+  color: #000;
+}
+
+.initials .amp {
+  font-family: var(--font-script);
+  color: var(--gold-color);
+  font-weight: lighter;
+}
+
+.wedding-title {
+  font-family: var(--font-classic);
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #666;
+}
+
+.date {
+  font-family: var(--font-classic);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Decoraciones florales (Placeholders) */
+.floral-decor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0.8;
+}
+/* AQUÍ PONES TUS IMÁGENES DE FLORES EN CSS O HTML */
+.top-left {
+  top: 0;
+  left: 0;
+  background-image: url("img/flores-esquina.png"); /* Reemplazar */
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  background-image: url("img/flores-esquina.png"); /* Reemplazar */
+  transform: rotate(180deg);
+}
+
+/* --- SECCIÓN 2: NOMBRES --- */
+.content-section {
+  padding: 60px 20px;
+}
+
+.couple-names {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  color: #222;
+  margin: 10px 0;
+}
+
+.gold {
+  color: var(--gold-color);
+}
+
+.divider-line {
+  height: 1px;
+  width: 100px;
+  background-color: var(--gold-color);
+  margin: 10px auto;
+}
+
+.date-large {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.location {
+  color: var(--gold-color);
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* --- SECCIÓN 3: DETALLES --- */
+.details-section {
+  padding: 40px 20px;
+  background-color: #fff; /* Ligero cambio de fondo */
+}
+
+.blessing {
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.parents-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.parents-col h3 {
+  font-family: var(--font-classic);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.parents-col p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+/* --- SECCIÓN 4: ITINERARIO --- */
+.itinerary-section {
+  padding: 60px 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.event-item {
+  width: 200px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #eee8d5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 2rem;
+  color: #555;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.map-btn {
+  background: transparent;
+  border: 1px solid var(--gold-color);
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  transition: 0.3s;
+}
+
+.map-btn:hover {
+  background: var(--gold-color);
+  color: white;
+}
+
+/* --- AUDIO --- */
+.audio-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+#play-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--gold-color);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-grid div, .card-grid div h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "a d1 d1"
+    "d2 b d3"
+    "d4 d4 c";
+  width: 200px;
+  height: 200px;
+}
+
+.card-grid1 {
+  grid-area: a;
+}
+
+.card-grid2 {
+  grid-area: b;
+}
+
+.card-grid3 {
+  grid-area: c;
+}
+
+.card-grid-d1 {
+  grid-area: d1;
+  width: 100%;
+}
+
+.card-grid-d2 {
+  grid-area: d2;
+  width: 100%;
+}
+
+.card-grid-d3 {
+  grid-area: d3;
+  width: 100%;
+}
+
+.card-grid-d3 {
+  grid-area: d4;
+  width: 100%;
+}

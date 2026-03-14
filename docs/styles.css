@@ -1,0 +1,467 @@
+/*:root {
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url("img/fondo.png") center/cover no-repeat;
+  background-color: #d8d2c8;
+}*/
+
+:root {
+  --bg-color: #fcfbf7; /* Color crema suave */
+  --text-color: #333;
+  --gold-color: #bfa05d; /* Dorado elegante */
+  --font-script: "Great Vibes", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-classic: "Cinzel", serif;
+  --gold: #bfa05d;
+  --cream: #fcfbf7;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Efecto de aparición (Scroll Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- SECCIÓN 1: PORTADA --- */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Marco estilo A4 */
+.card-frame {
+  border: 2px solid var(--gold-color);
+  padding: 40px 20px;
+  width: 80%;
+  max-width: 400px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.initials {
+  font-family: var(--font-classic);
+  font-size: 4rem;
+  color: #000;
+}
+
+.initials .amp {
+  font-family: var(--font-script);
+  color: var(--gold-color);
+  font-weight: lighter;
+}
+
+.wedding-title {
+  font-family: var(--font-classic);
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #666;
+}
+
+.date {
+  font-family: var(--font-classic);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Decoraciones florales (Placeholders) */
+.floral-decor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0.8;
+}
+/* AQUÍ PONES TUS IMÁGENES DE FLORES EN CSS O HTML */
+.top-left {
+  top: 0;
+  left: 0;
+  background-image: url("img/flores-esquina.png"); /* Reemplazar */
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  background-image: url("img/flores-esquina.png"); /* Reemplazar */
+  transform: rotate(180deg);
+}
+
+/* --- SECCIÓN 2: NOMBRES --- */
+.content-section {
+  padding: 60px 20px;
+}
+
+.couple-names {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  color: #222;
+  margin: 10px 0;
+}
+
+.great-msg {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  color: #222;
+  margin: 10px 0;
+}
+
+.gold {
+  color: var(--gold-color);
+}
+
+.divider-line {
+  height: 1px;
+  width: 100px;
+  background-color: var(--gold-color);
+  margin: 10px auto;
+}
+
+.date-large {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.location {
+  color: var(--gold-color);
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* --- SECCIÓN 3: DETALLES --- */
+.details-section {
+  padding: 40px 20px;
+  background-color: #fff; /* Ligero cambio de fondo */
+}
+
+.blessing {
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.parents-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.parents-col h3 {
+  font-family: var(--font-classic);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.parents-col p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+/* --- SECCIÓN 4: ITINERARIO --- */
+.itinerary-section {
+  padding: 60px 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.event-item {
+  width: 200px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #eee8d5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 2rem;
+  color: #555;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.map-btn {
+  background: transparent;
+  border: 1px solid var(--gold-color);
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  transition: 0.3s;
+}
+
+.map-btn:hover {
+  background: var(--gold-color);
+  color: white;
+}
+
+/* --- AUDIO --- */
+.audio-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+#play-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--gold-color);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* TARJETA */
+
+.card {
+  background: var(--cream);
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+/* MONOGRAMA */
+
+.monogram {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+/* Inicial izquierda */
+
+.letter {
+  font-family: "Great Vibes", serif;
+  font-style: italic;
+  font-size: 5dvh;
+  font-weight: 600;
+  position: absolute;
+}
+
+.left {
+  top: 0;
+  left: 10%;
+}
+
+.right {
+  bottom: 0;
+  right: 10%;
+}
+
+/* AMPERSAND CENTRAL */
+
+.amp {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-size: 6dvh;
+  color: var(--gold);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 0.8;
+}
+
+.wrapper {
+  height: 70%;
+  width: 40%;
+}
+
+@media (max-width: 767px) {
+  .letter {
+    font-size: 8dvh;
+  }
+
+  .amp {
+    font-size: 10dvh;
+  }
+  .wrapper {
+    width: 80%;
+  }
+  .img-decorator-left {
+    height: 20% !important;
+  }
+
+  .img-decorator-right {
+    height: 20% !important;
+  }
+  .great-msg {
+    font-size: 1.8rem;
+  }
+  .couple-names {
+    font-size: 1.8rem;
+  }
+  .date-large {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .letter {
+    font-size: 7dvh;
+  }
+  .amp {
+    font-size: 9dvh;
+  }
+  .great-msg {
+    font-size: 2.5rem;
+  }
+  .couple-names {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1320px) {
+  .letter {
+    font-size: 7dvh;
+  }
+  .amp {
+    font-size: 9dvh;
+  }
+  .wrapper {
+    width: 30%;
+  }
+  .great-msg {
+    font-size: 3rem;
+  }
+  .couple-names {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .letter {
+    font-size: 7dvh;
+  }
+  .amp {
+    font-size: 9dvh;
+  }
+  .wrapper {
+    width: 20%;
+  }
+}
+
+.hero-section-img {
+  height: 100%;
+}
+
+.hero-section img {
+  position: absolute;
+  width: auto;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.img-decorator-left,
+.img-decorator-right {
+  width: auto;
+  height: 40%;
+}
+
+.img-decorator-left {
+  top: 0;
+  left: 0;
+}
+
+.img-decorator-right {
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0;
+}
+
+.gold-amp {
+  color: var(--gold-color);
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+}
+
+/* LINEA */
+
+.line {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 40px 0 20px 0;
+}
+
+/* TEXTO INFERIOR */
+
+.subtitle {
+  font-family: "Cinzel", serif;
+  letter-spacing: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.date {
+  font-family: "Cinzel", serif;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #25d366;
+}

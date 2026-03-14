@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kylie & Anthony - Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="audio-player">
+      <button id="play-btn"><i class="fas fa-music"></i></button>
+      <audio id="wedding-music" loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+
+    <section class="hero-section">
+      <div class="floral-decor top-left"></div>
+      <div class="floral-decor bottom-right"></div>
+
+      <div class="card-frame reveal">
+        <div style="margin-bottom: 50px;">
+          <div class="card-grid">
+            <div class="card-grid1">
+              <h1 class="couple-names">F</h1>
+            </div>
+            <div class="card-grid-d1"> </div>
+            <div class="card-grid-d2"> </div>
+            <div class="card-grid2">
+              <h1 class="couple-names"><span class="gold">&</span></h1>
+            </div>
+            <div class="card-grid-d3"> </div>
+            <div class="card-grid3">
+              <h1 class="couple-names">F</h1>
+            </div>
+            <div class="card-grid-d4"> </div>
+          </div>
+        </div>
+        <div class="divider">
+          <img src="img/adorno.png" alt="adorno" class="ornament" />
+        </div>
+        <div class="wedding-title">THE WEDDING</div>
+        <div class="date">28 NOVIEMBRE 2025</div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container reveal">
+        <p class="welcome-msg">¡Nos Casamos!</p>
+
+        <h1 class="couple-names">Fatima <span class="gold">&</span> Francisco</h1>
+
+        <div class="divider-line"></div>
+        <p class="date-large">28 Noviembre 2025</p>
+        <div class="divider-line"></div>
+
+        <p class="location">
+          <i class="fas fa-map-marker-alt"></i> Morelia, Michoacán
+        </p>
+      </div>
+    </section>
+
+    <section class="details-section">
+      <div class="container reveal">
+        <p class="blessing">Con la bendición de Dios y de nuestros padres</p>
+
+        <div class="parents-grid">
+          <div class="parents-col">
+            <h3>PAPÁS DE LA NOVIA</h3>
+            <p>Teresa Arellano Sámaro</p>
+            <p>Fernando Martínez Reed</p>
+          </div>
+          <div class="parents-col">
+            <h3>PAPÁS DEL NOVIO</h3>
+            <p>Blanca Estopier Mondragón</p>
+            <p>Alejandro Serralde Vargas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="itinerary-section">
+      <div class="container reveal">
+        <div class="timeline">
+          <div class="event-item">
+            <div class="icon-circle">
+              <i class="fas fa-rings-wedding"></i>
+              <i class="fa-solid fa-church"></i>
+            </div>
+            <h3>Ceremonia</h3>
+            <p class="time">6:00 pm</p>
+            <p class="place">Templo de Santo Domingo</p>
+            <button class="map-btn">Ver Mapa</button>
+          </div>
+
+          <div class="event-item">
+            <div class="icon-circle">
+              <i class="fas fa-glass-cheers"></i>
+            </div>
+            <h3>Recepción</h3>
+            <p class="time">8:30 pm</p>
+            <p class="place">Casa Dos Lagos</p>
+            <button class="map-btn">Ver Mapa</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

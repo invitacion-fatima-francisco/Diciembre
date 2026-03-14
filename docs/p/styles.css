@@ -1,0 +1,247 @@
+:root {
+  --bg-color: #fdfcf8; /* Color crema muy suave */
+  --gold-color: #bfa05d;
+  --text-dark: #2c2c2c;
+  --font-titles: "Cinzel", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-body: "Playfair Display", serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* --- ANIMACIONES --- */
+
+/* Animación de entrada (Carga inicial) */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.entrance-anim {
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Scroll Reveal (para el resto de secciones) */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- SECCIÓN PORTADA --- */
+.hero-section {
+  height: 100vh; /* Pantalla completa */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 534px) {
+  .couple-names {
+    font-size: 2.8rem !important;
+  }
+}
+
+.container-welcome {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-welcome-2 {
+  min-width: 75dvw !important;
+}
+
+.couple-names {
+  font-family: var(--font-script);
+  font-size: 3.5rem;
+  margin: 10px 0;
+}
+
+/* Fondo de Flores */
+.background-flowers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* IMPORTANTE: Aquí va tu imagen de flores grandes */
+  background-image: url("img/flores-fondo.png");
+  background-size: cover; /* O 'contain' si quieres que se vean completas */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0; /* Detrás de todo */
+  opacity: 0.9; /* Un poco transparentes para que no pesen visualmente */
+}
+
+/* El Marco Blanco (Hoja A4 vertical) */
+.card-frame {
+  position: relative;
+  z-index: 10; /* Encima de las flores */
+  background-color: rgba(255, 255, 255, 0.95); /* Blanco semitransparente */
+  border: 2px solid var(--gold-color);
+  height: 55%;
+  width: 50%;
+  padding: 60px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- INICIALES ESTILO DIAGONAL --- */
+.initials-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 90%; /* Ancho fijo para controlar posición */
+  margin: 0 auto 20px auto;
+  position: relative;
+}
+
+.letter-k {
+  font-family: var(--font-titles);
+  font-size: 5rem;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: left;
+  line-height: 1;
+}
+
+.letter-a {
+  font-family: var(--font-titles);
+  font-size: 5rem;
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  line-height: 1;
+  margin-top: -20px; /* Subir un poco la A para acercarla */
+}
+
+.ampersand {
+  font-family: var(--font-script);
+  font-size: 6rem;
+  color: var(--gold-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado absoluto */
+  opacity: 0.8;
+}
+
+/* --- TEXTOS PORTADA --- */
+.ornament-text {
+  color: var(--gold-color);
+  font-size: 1.5rem;
+}
+
+.wedding-title {
+  font-family: var(--font-titles);
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  margin-top: 25px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.date {
+  font-family: var(--font-titles);
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --- RESTO DE ESTILOS (IGUAL QUE ANTES) --- */
+.content-section,
+.details-section,
+.itinerary-section {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-color); /* Para tapar las flores al bajar */
+}
+
+.gold {
+  color: var(--gold-color);
+}
+
+.divider-line {
+  height: 1px;
+  width: 80px;
+  background-color: var(--gold-color);
+  margin: 15px auto;
+}
+
+.parents-grid,
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.parents-col h3 {
+  font-family: var(--font-titles);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.icon-circle {
+  font-size: 2rem;
+  color: var(--gold-color);
+  margin-bottom: 10px;
+}
+
+.map-btn {
+  background: transparent;
+  border: 1px solid var(--gold-color);
+  padding: 8px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: 0.3s;
+}
+.map-btn:hover {
+  background: var(--gold-color);
+  color: white;
+}
+
+/* AUDIO */
+.audio-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+#play-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--gold-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+}

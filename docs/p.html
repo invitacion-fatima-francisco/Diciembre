@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="¡Estás invitado! Boda de Fátima y Francisco" />
+    <meta property="og:description" content="Nos encantaría que nos acompañes a celebrar nuestro gran día este 26 de Diciembre de 2026. Toca aquí para abrir tu invitación." />
+    <meta property="og:image" content="https://tu-dominio.com/img/preview-boda.jpg" />
+    <meta property="og:url" content="https://tu-dominio.com/invitacion-fatima-francisco" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Invitación Boda Fátima y Francisco</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  </head>
+
+  <body>
+    <div id="pantalla-botella" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #ffffff; z-index: 9999; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+      <div id="animacion-contenedor" style="width: 100%; max-width: 400px; position: absolute; top: 40%; transform: translateY(-50%);"></div>
+    </div>
+
+    <div class="audio-player">
+      <button id="play-btn"><i class="fas fa-music"></i></button>
+      <audio id="wedding-music" loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+
+    <section class="hero-section">
+      <img class="hero-section-img" src="img/p3.png" alt="flores" />
+
+      <div class="wrapper">
+        <div class="card">
+          <div class="monogram">
+            <div class="letter left">F</div>
+            <div class="amp">&</div>
+            <div class="letter right">F</div>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="subtitle">LA BODA</div>
+          <div class="date">26 DICIEMBRE 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-section">
+      <img src="img/p1.png" alt="flores" class="img-decorator-left" />
+      <img src="img/p1.png" alt="flores" class="img-decorator-right" />
+      <div class="wrapper">
+        <div class="card">
+          <p class="welcome-msg">¡Nos Casamos!</p>
+
+          <h1 class="couple-names">Guadalupe Fátima Flores Villaseñor</h1>
+          <h1 class="couple-names"><span class="gold-amp">&</span></h1>
+          <h1 class="couple-names">Francisco Serratos Trejo</h1>
+
+          <div class="divider-line"></div>
+          <p class="date-large">26 Diciembre 2026</p>
+          <div class="divider-line"></div>
+
+          <p class="location">
+            <i class="fas fa-map-marker-alt"></i> Querétaro, Qro.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container reveal">
+        <p class="great-msg">
+          Hay momentos en la vida que son especiales por si solos, pero sin
+          lugar a dudas, el hecho de que Dios nos haya permitido compartir junto
+          a ustedes nuestro feliz comienzo, lo convierte en un día inolvidable.
+        </p>
+
+        <p class="great-msg">
+          Y a medida que los años pasen, con gran placer recordaremos esta
+          celebración de nuestro amor, su compañía y sus buenos deseos...
+        </p>
+
+        <p class="great-msg">Gracias por hacer de este día algo especial.</p>
+      </div>
+    </section>
+
+    <section class="hero-section">
+      <img class="hero-section-img" src="img/novios.jpeg" alt="novios" />
+    </section>
+
+    <section class="details-section">
+      <div class="container reveal">
+        <p class="blessing">Con la bendición de Dios y de nuestros padres</p>
+
+        <div class="parents-grid">
+          <div class="parents-col">
+            <h3>PAPÁS DE LA NOVIA</h3>
+            <p>Zenaida Villaseñor Ledezma</p>
+            <p>Juan Flores Chávez</p>
+          </div>
+          <div class="parents-col">
+            <h3>PAPÁS DEL NOVIO</h3>
+            <p>María de los Ángeles Trejo Rico</p>
+            <p>Salvador Serratos Ledezma</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="itinerary-section">
+      <div class="container reveal">
+        <div class="timeline">
+          <div class="event-item">
+            <div class="icon-circle">
+              <i class="fas fa-rings-wedding"></i>
+              <i class="fa-solid fa-church"></i>
+            </div>
+            <h3>Ceremonia</h3>
+            <p class="time">14:00 pm</p>
+            <p class="place">Parroquia San Rafael Guizar y Valencia</p>
+            <button
+              data-map="https://maps.app.goo.gl/8erEL13ZgNyhquU4A"
+              class="map-btn"
+            >
+              Ver Mapa
+            </button>
+          </div>
+
+          <div class="event-item">
+            <div class="icon-circle">
+              <i class="fas fa-glass-cheers"></i>
+            </div>
+            <h3>Recepción</h3>
+            <p class="time">16:00 pm</p>
+            <p class="place">La herencia</p>
+            <button
+              data-map="https://maps.app.goo.gl/nxHjJ1MeAw7v9P1o8"
+              class="map-btn"
+            >
+              Ver Mapa
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="icon-circle">
+      <a
+        href="https://api.whatsapp.com/send/?phone=4426017058&text=Gracias+por+la+invitación.+Nos+vemos+pronto+para+celebrar+este+día+tan+especial+para+los+novios+Fátima+y+Francisco+🥂&type=phone_number&app_absent=0"
+        target="_blank"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <h3>Confirma tu asistencia</h3>
+
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contenedor = document.getElementById("animacion-contenedor");
+        const pantallaBotella = document.getElementById("pantalla-botella");
+
+        const animacion = lottie.loadAnimation({
+          container: contenedor, 
+          renderer: 'svg',
+          loop: false,
+          autoplay: false, 
+          path: 'carta.json' 
+        });
+
+        // 1. FORZAR EL PRIMER FRAME
+        animacion.addEventListener('data_ready', () => {
+          animacion.goToAndStop(25, true); 
+        });
+
+        // 2. UN SOLO CLIC Y REPRODUCIR
+        let animacionIniciada = false;
+
+        pantallaBotella.addEventListener("click", () => {
+          if (animacionIniciada) return; 
+          animacionIniciada = true;
+          
+          const totalFrames = animacion.totalFrames;
+          const mitadFrames = (totalFrames / 2)+5;
+
+          animacion.playSegments([25, mitadFrames], true);
+          
+          const duracionMitadMilisegundos = (animacion.getDuration(false) * 1000) / 2;
+
+          setTimeout(() => {
+            pantallaBotella.style.transition = "opacity 1s ease-in-out";
+            pantallaBotella.style.opacity = "0"; 
+            
+            setTimeout(() => {
+              pantallaBotella.style.display = "none"; 
+            }, 1000); 
+          }, duracionMitadMilisegundos);
+        });
+      });
+    </script>
+  </body>
+</html>
