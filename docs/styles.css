@@ -328,11 +328,11 @@ body {
 
 @media (max-width: 767px) {
   .letter {
-    font-size: 8dvh;
+    font-size: 7vh;
   }
 
   .amp {
-    font-size: 10dvh;
+    font-size: 8dvh;
   }
   .wrapper {
     width: 80%;
